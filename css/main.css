@@ -342,5 +342,11 @@ nav {
     font-weight: bold;
     color: #00cc0a;
   }
-  .listMechanics__then {}
+  .listMechanics__then {
+    margin-bottom: 20px;
+  }
+  .listMechanics__gif {
+    width: 500px;
+    display: block;
+  }
 
