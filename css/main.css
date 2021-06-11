@@ -262,12 +262,44 @@ textarea {
 }
 
 /* custom styles here */
-header {
+nav {
   background-color: #000;
   color: #fff;
+  /* display: flex; */
 }
-header a {
+nav a {
   color: #fff;
+}
+
+.navLink {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+.navLink:hover .navLink__img {
+  transform: scale(1.5);
+}
+.navLink__img {
+  width: 100%;
+  position: absolute;
+  transform: scale(0.85);
+  transition: all .5s;
+}
+.navLink__text {
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #000;
+  opacity: 0.5;
+  transition: all .5s;
+}
+.navLink:hover .navLink__text {
+  opacity: 1;
 }
 
 .content {
@@ -275,22 +307,22 @@ header a {
   margin: 0 2%;
 }
 
-.list-card {}
-.list-card__item {
+.listCard {}
+.listCard__item {
 
 }
-.list-card__link {
+.listCard__link {
   text-decoration: none;
 }
-.list-card__imgWrapper {
+.listCard__imgWrapper {
   overflow: hidden;
   display: inline-block;
   border: 1px solid gray;
 }
-.list-card__img {
+.listCard__img {
   width: 100px;
   transition: all .5s;
 }
-.list-card__img:hover {
-    transform:scale(2.5);
+.listCard__img:hover {
+  transform: scale(2.5);
 }
