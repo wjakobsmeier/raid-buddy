@@ -261,3 +261,36 @@ textarea {
   }
 }
 
+/* custom styles here */
+header {
+  background-color: #000;
+  color: #fff;
+}
+header a {
+  color: #fff;
+}
+
+.content {
+  width: 96%;
+  margin: 0 2%;
+}
+
+.list-card {}
+.list-card__item {
+
+}
+.list-card__link {
+  text-decoration: none;
+}
+.list-card__imgWrapper {
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid gray;
+}
+.list-card__img {
+  width: 100px;
+  transition: all .5s;
+}
+.list-card__img:hover {
+    transform:scale(2.5);
+}
