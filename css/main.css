@@ -265,11 +265,10 @@ textarea {
 nav {
   background-color: #000;
   color: #fff;
-  /* display: flex; */
 }
-nav a {
-  color: #fff;
-}
+  nav a {
+    color: #fff;
+  }
 
 .navLink {
   width: 100px;
@@ -278,29 +277,29 @@ nav a {
   overflow: hidden;
   position: relative;
 }
-.navLink:hover .navLink__img {
-  transform: scale(1.5);
-}
-.navLink__img {
-  width: 100%;
-  position: absolute;
-  transform: scale(0.85);
-  transition: all .5s;
-}
-.navLink__text {
-  text-align: center;
-  z-index: 10;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  background-color: #000;
-  opacity: 0.5;
-  transition: all .5s;
-}
-.navLink:hover .navLink__text {
-  opacity: 1;
-}
+  .navLink__img {
+    width: 100%;
+    position: absolute;
+    transform: scale(0.85);
+    transition: all .5s;
+  }
+  .navLink:hover .navLink__img {
+    transform: scale(1.5);
+  }
+  .navLink__text {
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+    opacity: 0.5;
+    transition: all .5s;
+  }
+  .navLink:hover .navLink__text {
+    opacity: 1;
+  }
 
 .content {
   width: 96%;
@@ -326,3 +325,22 @@ nav a {
 .listCard__img:hover {
   transform: scale(2.5);
 }
+
+.listMechanics {}
+  .listMechanics__when:before {
+    content: "When:";
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  .listMechanics__when {}
+  .listMechanics__then:before {
+    content: "Then:";
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #00cc0a;
+  }
+  .listMechanics__then {}
+
