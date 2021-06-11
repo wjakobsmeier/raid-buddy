@@ -262,6 +262,10 @@ textarea {
 }
 
 /* custom styles here */
+body {
+  font-family: Helvetica, sans-serif;
+}
+
 nav {
   background-color: #000;
   color: #fff;
@@ -344,6 +348,7 @@ nav {
   }
   .listMechanics__then {
     margin-bottom: 20px;
+    margin-left: 0px;
   }
   .listMechanics__gif {
     width: 500px;
