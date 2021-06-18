@@ -264,6 +264,7 @@ textarea {
 /* custom styles here */
 body {
   font-family: Helvetica, sans-serif;
+  overflow-x: hidden; /* ensures the hero image hack doesn't break the page */
 }
 
 nav {
