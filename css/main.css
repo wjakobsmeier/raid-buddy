@@ -281,6 +281,9 @@ nav {
   overflow: hidden;
   position: relative;
 }
+.navLink--active {
+  color: red
+}
   .navLink__img {
     width: 100%;
     position: absolute;
@@ -317,7 +320,7 @@ nav {
 .listCard__link {
   text-decoration: none;
 }
-.listCard__imgWrapper {
+/* .listCard__imgWrapper {
   overflow: hidden;
   display: inline-block;
   border: 1px solid gray;
@@ -328,7 +331,7 @@ nav {
 }
 .listCard__img:hover {
   transform: scale(2.5);
-}
+} */
 
 .listMechanics {}
   .listMechanics__when:before {
@@ -355,3 +358,27 @@ nav {
     display: block;
   }
 
+.heroImage {
+  /* 
+   * since there is a 2% margin on either side, to get the image to cover the entire width, 104% and -2%
+   * should be sufficient but Google Chrome showed a 1px gap still so added 1% on each side and moved it 
+   * over to the left by 1 more percent accodingly.
+   */
+  width: 106%;
+  height: 100vh; 
+  margin: 0 0 0 -3%;
+  position: relative;
+}
+.heroImage--Tarragrue {
+  background: url(../img/TARRAGRUE.jpg) center;
+  background-size: cover;
+}
+  .heroImage__text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+    mix-blend-mode: soft-light;
+  }
