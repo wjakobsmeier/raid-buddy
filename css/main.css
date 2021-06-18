@@ -265,15 +265,17 @@ textarea {
 body {
   font-family: Helvetica, sans-serif;
   overflow-x: hidden; /* ensures the hero image hack doesn't break the page */
+  background-color: #000;
+  color: #fff;
 }
 
 nav {
   background-color: #000;
   color: #fff;
 }
-  nav a {
-    color: #fff;
-  }
+nav a {
+  color: #fff;
+}
 
 .navLink {
   width: 100px;
@@ -285,79 +287,93 @@ nav {
 .navLink--active {
   color: red
 }
-  .navLink__img {
-    width: 100%;
-    position: absolute;
-    transform: scale(0.85);
-    transition: all .5s;
-  }
-  .navLink:hover .navLink__img {
-    transform: scale(1.5);
-  }
-  .navLink__text {
-    text-align: center;
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    background-color: #000;
-    opacity: 0.5;
-    transition: all .5s;
-  }
-  .navLink:hover .navLink__text {
-    opacity: 1;
-  }
+.navLink__img {
+  width: 100%;
+  position: absolute;
+  transform: scale(0.85);
+  transition: all .5s;
+}
+.navLink:hover .navLink__img {
+  transform: scale(1.5);
+}
+.navLink__text {
+  text-align: center;
+  line-height: 0.9em;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #000;
+  opacity: 0.5;
+  transition: all .5s;
+}
+.navLink:hover .navLink__text {
+  opacity: 1;
+}
 
 .content {
   width: 96%;
   margin: 0 2%;
 }
 
-.listCard {}
+.listCard {
+  padding: 0;
+  width: 50%;
+  margin: 0 auto;
+}
 .listCard__item {
-
+  counter-increment: index; 
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  align-items: center;
+}
+.listCard__item::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  background-image: linear-gradient(to bottom, #a335ee, #e66b13);
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .listCard__link {
   text-decoration: none;
+  color: #a335ee;
 }
-/* .listCard__imgWrapper {
-  overflow: hidden;
-  display: inline-block;
-  border: 1px solid gray;
+.listCard__link:hover {
+  color: #e66b13;
 }
-.listCard__img {
-  width: 100px;
-  transition: all .5s;
-}
-.listCard__img:hover {
-  transform: scale(2.5);
-} */
 
 .listMechanics {}
-  .listMechanics__when:before {
-    content: "When:";
-    display: inline-block;
-    margin-right: 5px;
-    font-weight: bold;
-    color: #ff0000;
-  }
-  .listMechanics__when {}
-  .listMechanics__then:before {
-    content: "Then:";
-    display: inline-block;
-    margin-right: 5px;
-    font-weight: bold;
-    color: #00cc0a;
-  }
-  .listMechanics__then {
-    margin-bottom: 20px;
-    margin-left: 0px;
-  }
-  .listMechanics__gif {
-    width: 500px;
-    display: block;
-  }
+.listMechanics__when:before {
+  content: "When:";
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #ff0000;
+}
+.listMechanics__when {}
+.listMechanics__then:before {
+  content: "Then:";
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #00cc0a;
+}
+.listMechanics__then {
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+.listMechanics__gif {
+  width: 500px;
+  display: block;
+}
 
 .heroImage {
   /* 
@@ -366,7 +382,8 @@ nav {
    * over to the left by 1 more percent accodingly.
    */
   width: 106%;
-  height: 100vh; 
+  /* 106px height of the nav bar at min width 1160px */
+  height: calc(100vh - 106px); 
   margin: 0 0 0 -3%;
   position: relative;
 }
@@ -374,12 +391,48 @@ nav {
   background: url(../img/TARRAGRUE.jpg) center;
   background-size: cover;
 }
-  .heroImage__text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 100px;
-    color: #fff;
-    mix-blend-mode: soft-light;
-  }
+.heroImage--Eye {
+  background: url(../img/EYE.jpg) center;
+  background-size: cover;
+}
+.heroImage--Nine {
+  background: url(../img/NINE.png) center;
+  background-size: cover;
+}
+.heroImage--Remnant {
+  background: url(../img/REMNANT.png) center;
+  background-size: cover;
+}
+.heroImage--Soulrender {
+  background: url(../img/SOULRENDER.png) center;
+  background-size: cover;
+}
+.heroImage--Painsmith {
+  background: url(../img/PAINSMITH.jpg) center;
+  background-size: cover;
+}
+.heroImage--Guardian {
+  background: url(../img/GUARDIAN.png) center;
+  background-size: cover;
+}
+.heroImage--Fatescribe {
+  background: url(../img/FATESCRIBE.png) center;
+  background-size: cover;
+}
+.heroImage--Kel {
+  background: url(../img/KELTHUZAD.jpg) center;
+  background-size: cover;
+}
+.heroImage--Sylvanas {
+  background: url(../img/SYLVANAS.jpg) center;
+  background-size: cover;
+}
+.heroImage__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  line-height: 0.8em;
+  mix-blend-mode: soft-light;
+}
