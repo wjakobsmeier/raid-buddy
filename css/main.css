@@ -429,10 +429,12 @@ nav a {
 }
 .heroImage__text {
   position: absolute;
-  bottom: 0;
+  bottom: 1.5rem;
   width: 100%;
   text-align: center;
   font-size: 100px;
   line-height: 0.8em;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 2px 2px 0 #000;
   mix-blend-mode: soft-light;
 }
